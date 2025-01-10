@@ -11,5 +11,14 @@ export default defineConfig({
       { find: '@components', replacement: path.resolve(__dirname, './src/components') },
       { find: '@styles', replacement: path.resolve(__dirname, './src/styles') },
     ],
+    extensions: ['.mjs', '.js', '.jsx', '.json', '.ts', '.tsx', 'css'],
+  },
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'components',
+      fileName: (format) => `components.${format}.js`,
+      formats: ['es', 'cjs', 'umd'],
+    },
   },
 })
