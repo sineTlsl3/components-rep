@@ -2,7 +2,7 @@
   "name": "components-rep",
   "private": true,
   "version": "0.0.0",
-  "main": "./dist/tui.mjs",
+  "main": "./dist/components-rep.mjs",
   "types": "./src/index.ts",
   "scripts": {
     "dev": "vite",

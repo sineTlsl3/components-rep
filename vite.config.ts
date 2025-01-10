@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import { resolve } from 'node:path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,9 +12,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'tui',
-      fileName: 'tui',
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'components-rep',
+      fileName: 'components-rep',
     },
     rollupOptions: {
       external: ['react'],
