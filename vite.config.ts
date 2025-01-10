@@ -16,9 +16,16 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'components',
-      fileName: (format) => `components.${format}.js`,
+      name: 'tui',
       formats: ['es', 'cjs', 'umd'],
+    },
+    rollupOptions: {
+      external: ['react'],
+      output: {
+        globals: {
+          react: 'React',
+        },
+      },
     },
   },
 })
