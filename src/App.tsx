@@ -1,34 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Checkbox from './components/box/Checkbox.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Checkbox id="1" isChecked={false} isDisabled={false} handleChange={() => alert('하이')} text={'안녕'} />\
+      <span></span>
+      <Checkbox id="2" isChecked={true} isDisabled={false} handleChange={() => alert('하이')} />
+      <Checkbox id="3" isChecked={true} isDisabled={false} handleChange={() => alert('하이')} />
+      {/*<h1>Hi</h1>*/}
+    </div>
   )
 }
 
