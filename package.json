@@ -2,7 +2,8 @@
   "name": "components-rep",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "main": "./dist/tui.mjs",
+  "types": "./src/index.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

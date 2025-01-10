@@ -6,11 +6,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: [
-      { find: '@', replacement: path.resolve(__dirname, './src') },
-      { find: '@components', replacement: path.resolve(__dirname, './src/components') },
-      { find: '@styles', replacement: path.resolve(__dirname, './src/styles') },
-    ],
+    alias: [{ find: '@', replacement: path.resolve(__dirname, './src') }],
     extensions: ['.mjs', '.js', '.jsx', '.json', '.ts', '.tsx', 'css'],
   },
   build: {
@@ -18,7 +14,6 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'tui',
       fileName: 'tui',
-      formats: ['es', 'cjs', 'umd'],
     },
     rollupOptions: {
       external: ['react'],
