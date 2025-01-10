@@ -28,14 +28,14 @@ input[type='checkbox']:checked + label::before {
   position: absolute;
   left: 0;
   top: 50%;
-  background: #2c7aff url('public/images/icons/ico_checkbox.svg') center center no-repeat;
-  border: 1px solid #2c7aff;
+  background: orange url('public/images/icons/ico_checkbox.svg') center center no-repeat;
+  border: 1px solid orange;
 }
 input[type='checkbox']:hover + label::before {
-  border: 1px solid #2c7aff;
+  border: 1px solid orange;
 }
 input[type='checkbox']:active + label::before {
-  background-color: #2c7aff;
+  background-color: orange;
 }
 
 .small {
