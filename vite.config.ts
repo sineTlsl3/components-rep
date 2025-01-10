@@ -17,6 +17,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'tui',
+      fileName: 'tui',
       formats: ['es', 'cjs', 'umd'],
     },
     rollupOptions: {
